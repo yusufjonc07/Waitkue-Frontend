@@ -1,0 +1,98 @@
+@import 'tailwind';
+@import 'vuestic';
+@import 'icon-fonts/index';
+
+body {
+  @apply text-regularMedium;
+
+  // TODO Move to some other place so that it's more elegant.
+  --va-checkbox-font-size: 0.875rem;
+  --va-card-box-shadow: none; // TODO Remove after https://github.com/epicmaxco/vuestic-ui/issues/3964
+  --va-card-padding: 1rem;
+  --va-font-family: 'Inter', sans-serif;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page-title {
+  @apply mb-6 text-[32px] font-bold leading-9 max-sm:mt-6 md:mb-4 md:text-5xl md:leading-[56px];
+}
+
+.h1 {
+  @apply mb-6 text-[32px] font-bold leading-9 max-sm:mt-6 md:mb-4 md:text-5xl md:leading-[56px];
+}
+
+.h3,
+.page-sub-title {
+  @apply text-2xl font-bold leading-[30px];
+}
+
+.h5 {
+  @apply font-bold leading-tight;
+}
+
+.block-title {
+  @apply mb-2 text-2xl font-bold;
+}
+
+.pricing-plan-card-title {
+  @apply text-[28px] font-bold leading-10 md:text-[32px];
+}
+
+.text-regular-small {
+  font-size: 0.8125rem;
+  line-height: 1rem;
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.carousel-caption-top {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 5rem;
+  padding-bottom: 10rem;
+  color: black;
+  text-align: center;
+  user-select: none;
+  pointer-events: none; /* prevents interaction */
+}
+.carousel-caption-top h3,
+.carousel-caption-top p {
+  color: black; /* or your desired text color */
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+
+.carousel-caption-top h3 {
+  margin: 0 0 0.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.carousel-caption-top p {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
