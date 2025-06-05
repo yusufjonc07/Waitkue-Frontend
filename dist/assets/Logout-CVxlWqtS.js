@@ -1,0 +1,2 @@
+import{u as n}from"./useAuth-D0ISSAP_.js";import{d as a,o as s,b as u,c as l,e}from"./index-Bcr3mXlA.js";const m=a({__name:"Logout",setup(r){const{logout:t}=n();return s(async()=>{setTimeout(async()=>{await t(),window.location.reload()},1e3)}),(i,o)=>(u(),l("div",null,o[0]||(o[0]=[e("h1",null,"You are being logged out...",-1),e("h1",null,"Redirecting to login...",-1)])))}});export{m as default};
+//# sourceMappingURL=Logout-CVxlWqtS.js.map
