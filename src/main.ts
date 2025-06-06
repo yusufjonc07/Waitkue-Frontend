@@ -11,6 +11,7 @@ import { createGtm } from '@gtm-support/vue-gtm'
 import stores from './stores'
 import router from './router'
 import vuesticGlobalConfig from './services/vuestic-ui/global-config'
+import { emitter } from './services/api'
 
 const app = createApp(App)
 
@@ -28,5 +29,9 @@ if (import.meta.env.VITE_APP_GTM_ENABLED) {
     }),
   )
 }
+
+emitter.on('unauthorized', () => {
+  router.go(0)
+})
 
 app.mount('#app')

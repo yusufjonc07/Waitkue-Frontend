@@ -60,6 +60,8 @@
   import { useAuth } from './composables/useAuth'
   import { useAuthStore } from '../../stores/auth'
   const { validate } = useForm('form')
+  import { useRouter } from 'vue-router'
+const router = useRouter()
 
   const formData = reactive({
     email: '',
@@ -75,7 +77,7 @@
       await login(formData.email, formData.password)
       const auth = useAuthStore()
       if (auth.isAuthenticated) {
-        window.location.reload()
+        router.go(0)
       }
     } catch (error) {
       console.error('Login failed:', error)
