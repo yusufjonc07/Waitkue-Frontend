@@ -1,7 +1,5 @@
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL
-import mitt from 'mitt'
 
-export const emitter = mitt()
 export default {
   // Endpoints...
   login: () => `${apiBaseUrl}/token`,
@@ -50,7 +48,7 @@ export default {
 
       if (response.status === 401) {
         await logoutAuth()
-        emitter.emit('unauthorized')
+        window.location.href = '/'
       }
 
       return await response.json()

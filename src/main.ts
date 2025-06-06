@@ -30,8 +30,4 @@ if (import.meta.env.VITE_APP_GTM_ENABLED) {
   )
 }
 
-emitter.on('unauthorized', () => {
-  router.go(0)
-})
-
 app.mount('#app')

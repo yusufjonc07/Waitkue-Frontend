@@ -8,13 +8,11 @@
 <script lang="ts" setup>
   import { onMounted } from 'vue'
   import { useAuth } from './composables/useAuth'
-  import { useRouter } from 'vue-router'
   const { logout } = useAuth()
-  const router = useRouter()
   onMounted(async () => {
     setTimeout(async () => {
       await logout()
-      router.go(0)
+       window.location.href = '/'
     }, 1000)
   })
 </script>
