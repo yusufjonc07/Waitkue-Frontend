@@ -44,7 +44,8 @@
 </script>
 
 <template>
-  <div v-if="loading" class="flex justify-center py-10">
+<div>
+    <div v-if="loading" class="flex justify-center py-10">
     <VaProgressCircle indeterminate size="large" />
   </div>
 
@@ -81,8 +82,5 @@
   <div v-if="totalPages > 1" class="mt-6 text-center text-sm text-gray-500">
     Showing page {{ props.pagination.page }} of {{ totalPages }}
   </div>
+</div>
 </template>
-
-<style scoped>
-  /* Add any custom card styling here */
-</style>

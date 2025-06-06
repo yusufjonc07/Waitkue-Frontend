@@ -23,7 +23,7 @@
   </VaLayout>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { onBeforeUnmount, onMounted, ref, computed } from 'vue'
   import { storeToRefs } from 'pinia'
   import { onBeforeRouteUpdate } from 'vue-router'
@@ -31,14 +31,10 @@
 
   import { useGlobalStore } from '../stores/global-store'
 
-  import AppLayoutNavigation from '../components/app-layout-navigation/AppLayoutNavigation.vue'
   import AppNavbar from '../components/navbar/AppNavbar.vue'
-  import AppSidebar from '../components/sidebar/AppSidebar.vue'
 
   const GlobalStore = useGlobalStore()
-
   const breakpoints = useBreakpoint()
-
   const sidebarWidth = ref('16rem')
   const sidebarMinimizedWidth = ref(undefined)
 
@@ -62,19 +58,13 @@
   onBeforeUnmount(() => {
     window.removeEventListener('resize', onResize)
   })
-
+  
   onBeforeRouteUpdate(() => {
     if (breakpoints.mdDown) {
-      // Collapse sidebar after route change for Mobile
       isSidebarMinimized.value = true
     }
   })
 
-  const isFullScreenSidebar = computed(() => isTablet.value && !isSidebarMinimized.value)
-
-  const onCloseSidebarButtonClick = () => {
-    isSidebarMinimized.value = true
-  }
 </script>
 
 <style lang="scss" scoped>

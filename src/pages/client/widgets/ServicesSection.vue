@@ -70,7 +70,8 @@
 <template>
   <!-- <h1 class="page-title">Services</h1> -->
 
-  <div class="my-2 flex flex-col justify-between gap-2 md:flex-row">
+ <div>
+   <div class="my-2 flex flex-col justify-between gap-2 md:flex-row">
     <div class="flex flex-col justify-start gap-2 md:flex-row">
       <VaInput v-model="filters.search" placeholder="Search">
         <template #prependInner>
@@ -110,6 +111,7 @@
       "
     />
   </VaModal>
+ </div>
 
   <!-- :before-cancel="beforeEditFormModalClose" -->
 </template>

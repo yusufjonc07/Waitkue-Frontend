@@ -10,7 +10,7 @@
       class="flex h-full flex-col-reverse justify-between gap-5 md:flex-row md:items-center"
     >
       <QueueReportChart
-        v-if="queues.length"
+        v-if="queues.length > 0 && months.length > 0"
         class="h-full min-h-72 w-full pt-4 sm:min-h-32"
         :queues="queues"
         :months="months"

@@ -17,32 +17,22 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/dashboard',
     meta: {
       requiresAuth: true,
-      roles: ['admin', 'service_admin', 'client'], // clients need access to settings/logout
     },
     children: [
       {
         name: 'dashboard',
         path: 'dashboard',
         component: () => import('../pages/admin/dashboard/Dashboard.vue'),
-        meta: {
-          roles: ['admin', 'service_admin'],
-        },
       },
       {
         name: 'queues',
         path: 'queues',
         component: () => import('../pages/queues/QueuesPage.vue'),
-        meta: {
-          roles: ['admin', 'service_admin'],
-        },
       },
       {
         name: 'waitlist',
         path: 'waitlist',
         component: () => import('../pages/queues/WaitlistPage.vue'),
-        meta: {
-          roles: ['admin', 'service_admin'],
-        },
       },
       {
         name: 'settings',
@@ -58,17 +48,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'users',
         path: 'users',
         component: () => import('../pages/users/UsersPage.vue'),
-        meta: {
-          roles: ['admin'],
-        },
       },
       {
         name: 'services',
         path: 'services',
         component: () => import('../pages/services/ServicesPage.vue'),
-        meta: {
-          roles: ['admin', 'service_admin'],
-        },
       },
       {
         name: 'logout',
@@ -82,14 +66,15 @@ const routes: Array<RouteRecordRaw> = [
     component: ClientLayout,
     children: [
       {
+        path: '',
+        redirect: { name: 'home' },
+      },
+      {
         name: 'home',
         path: 'home',
         component: () => import('../pages/client/HomePage.vue'),
       },
     ],
-    meta: {
-      roles: ['client'],
-    },
   },
   {
     path: '/auth',
@@ -149,21 +134,17 @@ router.beforeEach((to, from, next) => {
   const userRole = auth.currentUser?.role
 
   const isAuthPage = to.path.startsWith('/auth')
+  const isHomePage = to.path.startsWith('/home')
+  const isAdminPage = to.path.includes('/dashboard')
 
-  if (to.matched.some(record => record.meta.requiresAuth) && !isLoggedIn) {
-    return next({ name: 'login' })
-  }
-
-  if (!isLoggedIn) {
-    if (to.path === '/' || (!to.path.startsWith('/auth') && to.name !== 'home')) {
-      return next({ name: 'home' })
-    }
-    return next()
-  }
-
-  if (isLoggedIn && isAuthPage) {
-    if (userRole === 'client') return next({ name: 'home' })
-    return next({ name: 'dashboard' })
+  if (isLoggedIn && (isAuthPage || isAdminPage) && userRole == 'client') {
+    next({ name: 'home' })
+  } else if (isLoggedIn && (isAuthPage || isHomePage) && userRole == 'admin') {
+    next({ name: 'dashboard' })
+  } else if (!isLoggedIn && to.meta.requiresAuth) {
+    next({ name: 'login' })
+  } else {
+    next()
   }
 })
 

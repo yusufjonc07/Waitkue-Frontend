@@ -85,7 +85,8 @@
 </script>
 
 <template>
-  <h1 class="page-title">Queues</h1>
+  <div>
+    <h1 class="page-title">Queues</h1>
 
   <VaCard>
     <VaCardContent>
@@ -144,4 +145,5 @@
       "
     />
   </VaModal>
+  </div>
 </template>

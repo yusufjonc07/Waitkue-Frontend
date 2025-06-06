@@ -78,7 +78,8 @@
 </script>
 
 <template>
-  <VaDataTable
+  <div>
+    <VaDataTable
     v-model:sort-by="sortByVModel"
     v-model:sorting-order="sortingOrderVModel"
     :columns="columns"
@@ -173,6 +174,7 @@
         :direction-links="false"
       />
     </div>
+  </div>
   </div>
 </template>
 
