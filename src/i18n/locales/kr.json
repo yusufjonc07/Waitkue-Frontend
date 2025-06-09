@@ -1,0 +1,250 @@
+{
+  "404": {
+    "title": "이 페이지는 사라졌습니다.",
+    "text": "그것이 옳지 않다고 생각되면 Plose는 우리에게 메시지를 보내주십시오. ",
+    "back_button": "대시 보드로 돌아갑니다"
+  },
+  "auth": {
+    "agree": "나는 동의한다",
+    "createAccount": "CRESE 계정",
+    "createNewAccount": "새 계정을 만듭니다",
+    "email": "이메일",
+    "login": "로그인",
+    "password": "비밀번호",
+    "recover_password": "비밀번호 복구",
+    "sign_up": "가입하십시오",
+    "keep_logged_in": "계속 로그인하십시오",
+    "termsOfUse": "이용 약관.",
+    "reset_password": "비밀번호를 재설정하십시오"
+  },
+  "typography": {
+    "primary": "기본 텍스트 스타일",
+    "secondary": "보조 텍스트 스타일"
+  },
+  "dashboard": {
+    "versions": "버전",
+    "setupRemoteConnections": "원격 연결을 설정합니다",
+    "currentVisitors": "현재 방문자",
+    "navigationLayout": "탐색 레이아웃",
+    "topBarButton": "상단 바",
+    "sideBarButton": "사이드 바"
+  },
+  "language": {
+    "brazilian_portuguese": "포르투갈",
+    "english": "영어",
+    "korean": "한국어",
+    "spanish": "불꽃",
+    "simplified_chinese": "단순화 된 중국어",
+    "persian": "페르시아 인"
+  },
+  "menu": {
+    "404": "404",
+    "auth": "인증",
+    "queues": "대기열",
+    "waitlist": "대기자 명단",
+    "services": "서비스",
+    "buttons": "장기간",
+    "timelines": "타임 라인",
+    "dashboard": "계기반",
+    "billing": "청구",
+    "login": "로그인",
+    "preferences": "계정 기본 설정",
+    "payments": "지불",
+    "settings": "응용 프로그램 설정",
+    "pricing-plans": "가격 책정 장소",
+    "payment-methods": "지불 mefods",
+    "signup": "가입",
+    "recover-password": "비밀번호 복구",
+    "recover-password-email": "비밀번호 이메일을 복구하십시오",
+    "faq": "VAQ",
+    "users": "사용자",
+    "projects": "프로젝트"
+  },
+  "messages": {
+    "all": "모든 메시지를 참조하십시오",
+    "new": "{name}의 새 메시지",
+    "mark_as_read": "빨간색으로 표시하십시오"
+  },
+  "navbar": {
+    "messageUs": "웹 개발 문의 :",
+    "repository": "Github Repo"
+  },
+  "notifications": {
+    "all": "AL 알림을 참조하십시오",
+    "less": "더 적은 알림을 참조하십시오",
+    "mark_as_read": "빨간색으로 표시하십시오",
+    "sentMessage": "당신은 메시지입니다",
+    "uploadedZip": "{type}으로 새 zip 파일을 uplloaded",
+    "startedTopic": "새로운 주제를 시작했습니다"
+  },
+  "user": {
+    "language": "언어를 변경하십시오",
+    "logout": "심벌 마크",
+    "login": "로그인하십시오",
+    "profile": "윤곽",
+    "settings": "설정",
+    "billing": "청구",
+    "faq": "VAQ",
+    "helpAndSupport": "도움 및 지원",
+    "projects": "프로젝트",
+    "account": "계정",
+    "explore": "탐험"
+  },
+  "treeView": {
+    "basic": "바틱",
+    "icons": "아이콘",
+    "selectable": "선택 가능",
+    "editable": "판",
+    "advanced": "고급의"
+  },
+  "chat": {
+    "title": "채팅",
+    "sendButton": "보내다"
+  },
+  "spacingPlayground": {
+    "value": "값",
+    "margin": "여유",
+    "padding": "심"
+  },
+  "spacing": {
+    "title": "간격"
+  },
+  "cards": {
+    "cards": "카드",
+    "fixed": "결정된",
+    "floating": "떠 있는",
+    "contentText": "얼룩말의 독특한 줄무늬는 사람들에게 가장 친숙한 동물 중 하나입니다.",
+    "contentTextLong": "얼룩말의 독특한 줄무늬는 사람들에게 가장 친숙한 동물 중 하나입니다. 그것들은 다양한 습관으로, 그리스 랜드, 사우나, 삼림, 손잡이, 산, 해안 언덕과 같은 습관으로 발생합니다. 다양한 인위 인자는 얼룩말 인구에 대한 얼룩말 집단에 대한 얼룩말 집단에 심각한 영향을 미쳤다. Grévy의 얼룩말과 산 얼룩말이 끝났습니다. 평원 Zebras는 Mup More Plender, Adupecies, The Quag입니다.",
+    "rowHeight": "행 높이",
+    "title": {
+      "default": "기본",
+      "withControls": "컨트롤로",
+      "customHeader": "맞춤형 헤더",
+      "withoutHeader": "Witgan 헤더",
+      "withImage": "이미지와 함께",
+      "withTitleOnImage": "이미지에 제목이 있습니다",
+      "withCustomTitleOnImage": "이미지에 사용자 정의 제목이 있습니다",
+      "withStripe": "스트라이프와 함께",
+      "withBackground": "Backroundd"
+    },
+    "button": {
+      "main": "기본",
+      "cancel": "취소",
+      "showMore": "더 보여주십시오",
+      "readMore": "더 보여주십시오"
+    },
+    "link": {
+      "edit": "판",
+      "setAsDefault": "기본값으로 설정합니다",
+      "delete": "삭제",
+      "traveling": "여행",
+      "france": "프랑스",
+      "review": "검토",
+      "feedback": "피드백을 남겨주세요",
+      "readFull": "전체 기사를 읽으십시오",
+      "secondaryAction": "2 차 행동",
+      "action1": "행동 1",
+      "action2": "액션 2"
+    }
+  },
+  "colors": {
+    "themeColors": "테마 색상",
+    "extraColors": "추가 색상",
+    "gradients": {
+      "basic": {
+        "title": "버튼 징계"
+      },
+      "hovered": {
+        "title": "호버링 된 버튼 졸업생",
+        "text": "호버 상태를 위해 원래 스타일 (그라디언트 또는 평평한 색상)에 15%를 적용하십시오."
+      },
+      "pressed": {
+        "title": "눌린 버튼 졸업",
+        "text": "프레스 상태의 원래 스타일 (그라디언트 또는 평평한 색상)에 15%를 어둡게합니다."
+      }
+    }
+  },
+  "tabs": {
+    "alignment": "탭 정렬",
+    "overflow": "탭 오버플로",
+    "hidden": "숨겨진 슬라이더가있는 탭",
+    "grow": "탭이 커집니다"
+  },
+  "helpAndSupport": "도움 및 지원",
+  "aboutVuesticAdmin": "Waitkue에 대해",
+  "supportAndConsulting": "지원 및 컨설팅",
+  "search": {
+    "placeholder": "찾다 ..."
+  },
+  "buttonSelect": {
+    "dark": "어두운",
+    "light": "빛"
+  },
+  "vuestic": {
+    "search": "찾다",
+    "noOptions": "찾을 수없는 항목",
+    "ok": "좋아요",
+    "cancel": "취소",
+    "uploadFile": "파일 업로드",
+    "undo": "수수되지 않았습니다",
+    "dropzone": "업로드하려면 여기에 파일을 삭제하십시오",
+    "fileDeleted": "파일이 삭제되었습니다",
+    "closeAlert": "가까운 경고",
+    "backToTop": "위로 돌아갑니다",
+    "toggleDropdown": "드롭 다운 토글",
+    "carousel": "카루셀",
+    "goPreviousSlide": "이전 슬라이드로 이동하십시오",
+    "goNextSlide": "다음 슬라이드로 가십시오",
+    "goSlide": "GO 슬라이드 {index}",
+    "slideOf": "{length}에서 {index} 슬라이드",
+    "close": "닫다",
+    "openColorPicker": "오픈 컬러 피커",
+    "colorSelection": "색상 선택",
+    "colorName": "컬러 {colorName}",
+    "decreaseCounter": "카운터를 줄입니다",
+    "increaseCounter": "카운터를 늘리십시오",
+    "selectAllRows": "모든 행을 선택하십시오",
+    "sortColumnBy": "{name}별로 정렬",
+    "selectRowByIndex": "행 선택 {index}",
+    "resetDate": "재설정 날짜",
+    "nextPeriod": "다음 기간",
+    "switchView": "스위치 뷰",
+    "previousPeriod": "이전 연기",
+    "removeFile": "파일을 제거하십시오",
+    "reset": "다시 놓기",
+    "pagination": "쪽수 매기기",
+    "goToTheFirstPage": "회사 페이지로 이동하십시오",
+    "goToPreviousPage": "Revius 페이지로 이동하십시오",
+    "goToSpecificPage": "{page} 페이지로 이동하십시오",
+    "goToSpecificPageInput": "이동할 페이지 번호를 입력하십시오",
+    "goNextPage": "다음 페이지로 이동하십시오",
+    "goLastPage": "Lavon 페이지로 이동하십시오",
+    "currentRating": "현재 등급 {value} {max}",
+    "voteRating": "투표 등급 {value} {max}",
+    "optionsFilter": "옵션 필터",
+    "splitPanels": "분할 패널",
+    "movePaginationLeft": "페이지를 남겨 두십시오",
+    "movePaginationRight": "페이지를 바로 움직입니다",
+    "resetTime": "시간을 재설정하십시오",
+    "closeToast": "가까운 맛",
+    "selectedOption": "선택된 옵션",
+    "noSelectedOption": "옵션이 선택되지 않았습니다",
+    "breadcrumbs": "빵 부스러기",
+    "counterValue": "카운터 값",
+    "selectedDate": "선택된 다트",
+    "selectedTime": "선택된 시간",
+    "progressState": "진행 법령",
+    "color": "색상",
+    "next": "다음",
+    "back": "이전의",
+    "finish": "마치다",
+    "step": "단계",
+    "progress": "진전",
+    "loading": "로딩",
+    "sliderValue": "현재 슬라이더 값은 {value}입니다.",
+    "switch": "스위치",
+    "inputField": "입력 필드",
+    "fileTypeIncorrect": "파일 유형이 올바르지 않습니다",
+    "select": "옵션을 선택하십시오"
+  }
+}
