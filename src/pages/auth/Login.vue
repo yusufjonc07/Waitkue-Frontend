@@ -2,7 +2,7 @@
   <VaForm ref="form" @submit.prevent="submit">
     <h1 class="mb-4 text-4xl font-semibold">Log in</h1>
     <p class="mb-4 text-base leading-5">
-      New to Vuestic?
+      New to Waitkue?
       <RouterLink :to="{ name: 'signup' }" class="font-semibold text-primary">Sign up</RouterLink>
     </p>
     <VaInput
@@ -39,12 +39,7 @@
         class="mb-2 sm:mb-0"
         label="Keep me signed in on this device"
       />
-      <RouterLink
-        :to="{ name: 'recover-password' }"
-        class="mt-2 font-semibold text-primary sm:ml-1 sm:mt-0"
-      >
-        Forgot password?
-      </RouterLink>
+     
     </div>
 
     <div class="mt-4 flex justify-center">
@@ -72,7 +67,7 @@
     if (!validate()) return
 
     try {
-      await login(formData.email, formData.password)
+      await login(formData.email, formData.password, formData.keepLoggedIn)
       const auth = useAuthStore()
       if (auth.isAuthenticated) {
          window.location.href = '/'

@@ -19,7 +19,7 @@
   },
   "typography": {
     "primary": "Primary text styles",
-    "secondary": "Secondary text styles"
+    "secondary": "Secondary text styles",
   },
   "dashboard": {
     "versions": "Versions",
@@ -37,6 +37,7 @@
     "persian": "Persian"
   },
   "menu": {
+    "home": "Home",
     "auth": "Auth",
     "queues": "Queues",
     "waitlist": "Waitlist",
@@ -66,7 +67,9 @@
   },
   "navbar": {
     "messageUs": "Web development inquiries:",
-    "repository": "GitHub Repo"
+    "repository": "GitHub Repo",
+    "signup_login": "SignUp/Login",
+    "contact": "Contact"
   },
   "notifications": {
     "all": "See all notifications",
@@ -245,5 +248,9 @@
     "inputField": "Input field",
     "fileTypeIncorrect": "File type is incorrect",
     "select": "Select an option"
+  }, 
+  "add": {
+    "theme": "Theme",
+    "general_preferences": "General preferences"
   }
 }

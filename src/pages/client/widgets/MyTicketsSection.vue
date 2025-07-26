@@ -85,8 +85,8 @@
 </script>
 
 <template>
-  <div>
-    <h1 class="page-title">Queues</h1>
+  <div class="p-4 pt-0 ">
+    <h1 class="page-title" style="font-weight: 500;">My tickets</h1>
 
   <VaCard>
     <VaCardContent>
@@ -107,7 +107,6 @@
             </template>
           </VaInput>
         </div>
-        <VaButton @click="showAddQueueModal">Add Queue</VaButton>
       </div>
 
       <QueuesTable

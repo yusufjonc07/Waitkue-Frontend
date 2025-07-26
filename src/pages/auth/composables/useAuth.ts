@@ -9,11 +9,12 @@ export const useAuth = () => {
   const router = useRouter()
   const authStore = useAuthStore()
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string, password: string, keepLoggedIn: boolean) => {
     isLoading.value = true
     error.value = null
     try {
-      await authStore.login({ email, password })
+      
+      await authStore.login({ email, password, keepLoggedIn })
     } catch (err) {
       error.value = err
     } finally {

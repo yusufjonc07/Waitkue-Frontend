@@ -30,4 +30,5 @@ if (import.meta.env.VITE_APP_GTM_ENABLED) {
   )
 }
 
+
 app.mount('#app')

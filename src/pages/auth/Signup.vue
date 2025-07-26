@@ -107,7 +107,7 @@ const submit1 = async () => {
   if (isValid) {
     try {
       await signup(formData.email, formData.password)
-      await login(formData.email.split('@')[0], formData.password)
+      await login(formData.email.split('@')[0], formData.password, true)
       init({ message: 'Account created successfully!', color: 'success' })
     } catch (error: any) {
       init({ message: error.message || 'Sign-up failed. Try again.', color: 'danger' })

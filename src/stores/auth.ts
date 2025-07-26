@@ -4,22 +4,33 @@ import { loginUser, registerUser, registerClient, fetchCurrentUser } from '../da
 import { NewClient, User } from '../pages/users/types'
 
 export const useAuthStore = defineStore('auth', {
-  state: () => ({
-    currentUser: JSON.parse(localStorage.getItem('user') || 'null') as User | null,
-    token: localStorage.getItem('access_token') || '',
-    isAuthenticated: !!localStorage.getItem('access_token'),
-  }),
+  state: () => {
+  const token = localStorage.getItem('access_token') || sessionStorage.getItem('access_token') || ''
+  const user = JSON.parse(localStorage.getItem('user') || sessionStorage.getItem('user') || 'null') as User | null
+  return {
+    token,
+    currentUser: user,
+    isAuthenticated: !!token,
+  }
+},
 
   actions: {
-    async login(credentials: { email: string; password: string }) {
+    async login(credentials: { email: string; password: string, keepLoggedIn: boolean }) {
       const response = await loginUser(credentials) // should return { access_token, user }
 
       this.token = response.access_token
       this.currentUser = response.user
       this.isAuthenticated = true
 
-      localStorage.setItem('access_token', response.access_token)
-      localStorage.setItem('user', JSON.stringify(response.user))
+
+     if (credentials.keepLoggedIn) {
+  localStorage.setItem('access_token', response.access_token)
+  localStorage.setItem('user', JSON.stringify(response.user))
+} else {
+  sessionStorage.setItem('access_token', response.access_token)
+  sessionStorage.setItem('user', JSON.stringify(response.user))
+}
+     
     },
 
     async signup(data: { email: string; password: string }) {

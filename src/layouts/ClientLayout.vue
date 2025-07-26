@@ -14,7 +14,7 @@
     </template>
 
     <template #content>
-      <main class="p-4 pt-0">
+      <main>
         <article>
           <RouterView />
         </article>

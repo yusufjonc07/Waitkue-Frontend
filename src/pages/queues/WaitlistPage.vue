@@ -6,12 +6,17 @@
   import { useServiceStore } from '../../stores/services'
   import { CarouselItem } from './types'
   import { buildImageUrl } from '../../services/utils'
+import { useGlobalStore } from '../../stores/global-store'
+import { storeToRefs } from 'pinia'
+import { useBreakpoint } from 'vuestic-ui'
 
   const queueStore = useQueuesStore()
   const serviceStore = useServiceStore()
 
   const carouselValue = ref(0)
   const carouselItems = ref<CarouselItem[]>([])
+  const breakpoints = useBreakpoint()
+  const { isSidebarMinimized, } = storeToRefs(useGlobalStore())
 
   let socket: WebSocket
 
@@ -120,7 +125,7 @@
         </VaAlert>
       </VaCardContent>
     </VaCard>
-    <div class="w-full sm:w-3/5">
+    <div class="w-full sm:w-3/5" v-if="isSidebarMinimized && breakpoints.mdUp" >
       <div v-if="carouselItems.length > 0" class="carousel-wrapper">
         <VaCarousel
           v-model="carouselValue"

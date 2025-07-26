@@ -5,6 +5,7 @@
   import { useQueues } from './composables/useQueues'
   import { useModal, useToast } from 'vuestic-ui'
   import EditQueueForm from './widgets/EditQueueForm.vue'
+import { useAuthStore } from '../../stores/auth'
 
   const doShowEditQueueModal = ref(false)
 
@@ -44,6 +45,8 @@
       }
     }
   }
+
+     const authStore = useAuthStore()
 
   const { init: notify } = useToast()
 
@@ -106,7 +109,7 @@
             </template>
           </VaInput>
         </div>
-        <VaButton @click="showAddQueueModal">Add Queue</VaButton>
+        <VaButton @click="showAddQueueModal" v-if="authStore.currentUser?.role == 'admin'">Add Queue</VaButton>
       </div>
 
       <QueuesTable

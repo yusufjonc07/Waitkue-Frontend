@@ -10,7 +10,7 @@
     <nav class="flex items-center">
       <VaBreadcrumbs>
         <VaBreadcrumbsItem
-          label="Home"
+          :label="t('menu.home')"
           :to="{ name: auth.currentUser?.role == 'client' ? 'home' : 'dashboard' }"
         />
         <VaBreadcrumbsItem

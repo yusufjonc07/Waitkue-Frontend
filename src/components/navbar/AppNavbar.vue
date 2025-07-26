@@ -1,8 +1,8 @@
 <template>
-  <VaNavbar class="app-layout-navbar px-0 py-2">
+  <VaNavbar class="app-layout-navbar px-0 py-0">
     <template #left>
       <div class="left">
-        <Transition v-if="isMobile" name="icon-fade" mode="out-in">
+        <Transition v-if="isMobile && isAuthenticated" name="icon-fade" mode="out-in">
           <VaIcon
             color="primary"
             :name="isSidebarMinimized ? 'menu' : 'close'"
@@ -12,12 +12,13 @@
           />
         </Transition>
         <RouterLink to="/" aria-label="Visit home page">
-          <VaImage src="/waitkue-logo.png" style="height: 60px; width: 220px" />
+            <h1 class="logo-text">Clinic<span>pro</span></h1>
         </RouterLink>
       </div>
     </template>
     <template #right>
-      <AppNavbarActions class="app-navbar__actions" :is-mobile="isMobile" />
+      <AppNavbarActions class="app-navbar__actions" :is-mobile="isMobile" v-if="isAuthenticated" />
+      <NavbarButtons v-if="!isAuthenticated && !isMobile" />
     </template>
   </VaNavbar>
 </template>
@@ -25,21 +26,29 @@
 <script setup lang="ts">
   import { storeToRefs } from 'pinia'
   import { useGlobalStore } from '../../stores/global-store'
+  import { useAuthStore } from '../../stores/auth'
   import AppNavbarActions from './components/AppNavbarActions.vue'
-  import VuesticLogo from '../VuesticLogo.vue'
+import NavbarButtons from './components/NavbarButtons.vue'
 
   defineProps({
     isMobile: { type: Boolean, default: false },
   })
 
   const GlobalStore = useGlobalStore()
-
   const { isSidebarMinimized } = storeToRefs(GlobalStore)
+
+  const AuthStore = useAuthStore()
+  const { isAuthenticated } = storeToRefs(AuthStore)
+  
 </script>
 
 <style lang="scss" scoped>
+
+  
+
   .va-navbar {
     z-index: 2;
+    box-shadow: 0 0 2px #aaa;
 
     @media screen and (max-width: 950px) {
       .left {
@@ -76,4 +85,14 @@
   .icon-fade-leave-to {
     transform: scale(0.5);
   }
+
+  .logo-text, .logo-text span{
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+   .logo-text span{
+    color: #154EC1;
+   }
+   
 </style>
