@@ -47,6 +47,10 @@ export const useAuthStore = defineStore('auth', {
       this.isAuthenticated = false
       localStorage.removeItem('access_token')
       localStorage.removeItem('user')
+      sessionStorage.removeItem('access_token')
+      sessionStorage.removeItem('user')
+
+
       console.log('Credentials were cleared')
     },
 

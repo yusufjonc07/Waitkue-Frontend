@@ -72,7 +72,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         name: 'home',
         path: 'home',
-        component: () => import('../pages/client/HomePage.vue'),
+        component: () => import('../pages/landing/HomePage.vue'),
       },
     ],
   },

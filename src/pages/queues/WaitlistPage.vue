@@ -117,7 +117,7 @@ import { useBreakpoint } from 'vuestic-ui'
           color="primary"
           @click="() => callTicketWithoutNotify(ticket.queue_id)"
         >
-          <VaCardContent class="flex"> {{ ticket.service }} #{{ ticket.number }} </VaCardContent>
+          <VaCardContent class="flex justify-between que-card"><span>{{ ticket.service }}</span> <span>#{{ ticket.number }}</span> </VaCardContent>
         </VaCard>
 
         <VaAlert v-if="!waitlist.waiting" color="info" class="mt-4" icon="info">
@@ -151,7 +151,8 @@ import { useBreakpoint } from 'vuestic-ui'
           color="info"
           @click="() => api.request(api.finish(ticket.queue_id.toString()), { method: 'POST' })"
         >
-          <VaCardContent> {{ ticket.service }} #{{ ticket.number }} </VaCardContent>
+                   <VaCardContent class="flex justify-between que-card"><span>{{ ticket.service }}</span> <span>#{{ ticket.number }}</span> </VaCardContent>
+
         </VaCard>
 
         <VaAlert v-if="!waitlist.meeting" color="info" class="mt-4" icon="info">
@@ -161,3 +162,8 @@ import { useBreakpoint } from 'vuestic-ui'
     </VaCard>
   </div>
 </template>
+<style lang="scss">
+.que-card span:last-child{
+  font-size: large;
+}
+</style>

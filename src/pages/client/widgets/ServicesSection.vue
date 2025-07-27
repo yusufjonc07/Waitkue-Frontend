@@ -71,7 +71,6 @@ const { confirm } = useModal()
 
   <div class="pt-0 p-4" id="services-section">
     <div class="search-bar text-center my-4">
-      <h1><span>#1</span> Get reserved for a service</h1>
       <VaInput style="width: 75%; border: none !important;" v-model="filters.search" placeholder="Search For Service">
         <template #prependInner>
           <VaIcon name="search" color="secondary" size="small" />
@@ -102,8 +101,8 @@ const { confirm } = useModal()
     margin: 40px auto;
      line-height: 110%;
 
-    span {
-      color: #154EC1;
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
     }
   }
 }

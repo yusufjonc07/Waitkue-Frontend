@@ -2,6 +2,7 @@ module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      scrollBehavior: ['responsive'],
       fontSize: {
         tag: ['0.5625rem', '0.875rem'],
         regularSmall: ['0.8125rem', '1rem'],

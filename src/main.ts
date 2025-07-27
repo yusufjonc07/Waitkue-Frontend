@@ -12,12 +12,17 @@ import stores from './stores'
 import router from './router'
 import vuesticGlobalConfig from './services/vuestic-ui/global-config'
 import { emitter } from './services/api'
+import 'aos/dist/aos.css'
+import AOS from 'aos'
+
 
 const app = createApp(App)
 
 app.use(stores)
 app.use(router)
 app.use(i18n)
+AOS.init()
+
 app.use(createVuestic({ config: vuesticGlobalConfig }))
 
 if (import.meta.env.VITE_APP_GTM_ENABLED) {

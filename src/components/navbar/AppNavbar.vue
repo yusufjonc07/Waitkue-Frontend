@@ -12,7 +12,7 @@
           />
         </Transition>
         <RouterLink to="/" aria-label="Visit home page">
-            <h1 class="logo-text">Clinic<span>pro</span></h1>
+            <h1 class="logo-text">Wait<span>Kue</span></h1>
         </RouterLink>
       </div>
     </template>
