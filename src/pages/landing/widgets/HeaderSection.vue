@@ -18,7 +18,7 @@
                 How it works 🤔 ?
             </VaButton>
         </div>
-        <img :src="`tv-mock.png`" alt="">
+        <img class="hero-image" :src="`tv-mock.png`" alt="">
     </div>
 
 </template>
@@ -37,16 +37,20 @@
     
    
 
-    img {
-        width: 80%;
-        margin-top: 4rem;
-        z-index: 100;
+    .hero-image {
+        @apply w-4/5 mx-auto mt-16;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.1));
+        transform: perspective(1000px) rotateX(10deg);
+        transition: transform 0.5s ease;
 
-        @media (max-width: 568px) {
-            width: 100%;
-            margin-top: 1rem;
-            margin-bottom: -20px;
+        &:hover {
+            transform: perspective(1000px) rotateX(0deg);
         }
+
+         @media (max-width: 480px) {
+            width: 100%;
+            margin-top: 2rem;
+         }
     }
 
     .text-container {

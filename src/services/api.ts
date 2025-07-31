@@ -22,6 +22,7 @@ export default {
   finish: (queue_id: number) => `${apiBaseUrl}/finish/${queue_id}`,
   queue: (id: number) => `${apiBaseUrl}/queue/${id}`,
   reportQueues: (year: number) => `${apiBaseUrl}/report/queues/${year}`,
+  reportServices: (year: number, month: number) => `${apiBaseUrl}/report/services?year=${year}&month=${month}`,
   allProjects: () => `${apiBaseUrl}/projects`,
   project: (id: string) => `${apiBaseUrl}/projects/${id}`,
   projects: ({ page, pageSize }: { page: number; pageSize: number }) =>

@@ -21,8 +21,17 @@ export type Queues = {
   tickets: number
 }
 
-export const getQueues = async (year: number, months: string[]) => {
+export type Services = {
+  serviceName: string
+  tickets: number
+}
+
+export const getQueues = async (year: number) => {
   return await api.request(api.reportQueues(year))
+}
+
+export const getServices = async (year: number, month: number) => {
+  return await api.request(api.reportServices(year, month))
 }
 
 export const getQueuePerMonth = (month: string, queues: Queues[]): Queues => {
